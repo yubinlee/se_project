@@ -1,0 +1,22 @@
+@charset "utf-8";
+*{-webkit-margin-start:0; -webkit-text-size-adjust:none;}
+body, select, input, textarea, a[href^="tel:"]:link{font-size:12px;}
+#wrapper{padding-top:73px;}
+#headwrap{min-width:320px;height:73px;background:url('bbroll.png') repeat-x 0 0;}
+#header{display:none;}
+
+.main #containerwrap, .main .visual01{background:none !important;}
+
+.main .section_cont02>ul>li{width:50%;margin-top:36px;}
+.main .section_cont02>ul>li:nth-child(1), .main .section_cont02>ul>li:nth-child(2){margin-top:0;}
+.main .section_cont02>ul li{font-size:13px;line-height:22px;}
+.main .section_cont02>ul>li>dd>a>img{width:37.4%;max-width:112px;}
+.main .section_cont02 li ul{width:90%;max-width:163px;}
+.main .section_cont02 li li{width:45.4%;text-align:left;margin-top:0;}
+.main .section_cont02 li li:nth-child(2n+1){margin-right:15px;text-align:right;}
+.main .section_cont02 li li img{width:100%;max-width:74px;}
+
+.menu #containerwrap{background:none !important;}
+#container #visual{display:none;}
+.main .section_cont02>ul>li{float:none;width:100%;}
+.main .section_cont02>ul>li:nth-child(2){margin-top:36px;}
