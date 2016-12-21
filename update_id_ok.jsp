@@ -11,30 +11,33 @@
 	Connection conn = null;		
 	PreparedStatement pstmt = null;
 	
-	String url = "서버";        
-	String dbuser = "유저네임";                                       
-	String dbpass = "유저비밀번호"; 
+	String url = "jdbc:mysql://localhost:3306/testdb"; 
+	String dbuser = "newuser"; 
+	String dbpass = "sbdbwj";
 	
 	String formId = request.getParameter("userid");
-	
+	String formId2 = request.getParameter("userid2");
 	try{
 		Class.forName("com.mysql.jdbc.Driver");            
 		conn=DriverManager.getConnection(url,dbuser,dbpass);
 		
-		String sql = "UPDATE account set where id =?";        
+		String sql = "UPDATE account set id=? where id =?";        
 		pstmt = conn.prepareStatement(sql); 
 		pstmt.setString(1, formId);
+		pstmt.setString(2, formId2);
 		pstmt.executeUpdate();
 		%>
 		회원 정보 수정 처리 완료 <br/><%
-		session.setAttribute("curuser", formId); 
-			%>  <script language=javascript>
-	   self.window.alert("성공적으로 변경되었습니다.");
-	   location.href="index.jsp"; 
-	   </script><%	
-	}catch(SQLException ex){
+		session.setAttribute("curuser", formId);%>
+		<script language=javascript>
+	  	self.window.alert("성공적으로 변경되었습니다.");
+	  	location.href="index.jsp"; 
+	   	</script><%	
+	}
+	catch(SQLException ex) {
 		out.println("에러: "+ex);		
-	}finally{
+	}
+	finally {
 		if(pstmt != null) try{pstmt.close();}catch(SQLException sqle){} 
 		if(conn != null) try{conn.close();}catch(SQLException sqle){}   
 	}		
