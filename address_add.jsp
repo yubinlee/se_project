@@ -1,13 +1,12 @@
-<%@ page contentType="text/html;charset=utf-8" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="java.io.*" %>
-<%@ page import="java.sql.*" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<html lang="ko">
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="layout.css" media="screen and (max-width:1080px)">
-<title>비밀번호 수정</title>
+<title>연락처 추가</title>
 </head>
 
 <body class="main">
@@ -18,32 +17,28 @@
 					<ul class="menu">
 						<form>
 							<table>
-								<h2>비밀번호 수정</h2>
+								<h2>연락처 추가 화면</h2>
 							</table>
 						</form>
 					</ul>
 				</div>
 			</header>
-			
 			<div id="containerwrap" class="visual01">
 				<div class="section_cont02">
 					<ul>
 						<li>
-							<form action="update_pw_ok.jsp" method="post">
+							<form action="address_add_ok.jsp" method="post">
 								<table border="1">
 									<tr>
-										<td>ID</td>
-										<td><input type="text" name="userid" size="20"></td>
+  										<td>이름</td>
+  										<td colspan="3"><input type="text" name="newname" size="15"></td>
 									</tr>
 									<tr>
-										<td>변경 비밀번호</td>
-										<td><input type="password" name="userpw" size="20"></td>
+  										<td>전화번호</td>
+  										<td colspan="3"><input type="text" name="newphone" size="30"></td>
 									</tr>
 									<tr>
-										<td>비밀번호 확인 </td>
-										<td><input type="password" name="userpwcheck" size="20"></td>
-									<tr>
-										<td colspan="4" align="center"><input type="submit" value="확인"></td>
+  										<td colspan="4" align="center"><input type="submit" value="추가"></td>
 									</tr>
 								</table>
 							</form>
