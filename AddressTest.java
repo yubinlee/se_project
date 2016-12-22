@@ -1,21 +1,6 @@
-import org.junit.*;
+﻿import org.junit.*;
 import static org.junit.Assert.*;
 public class AddressTest {
-@Test
-public void whenContains010ValidationTest() {
-	Address value = new Address();
-	assertTrue(value.whetherIfContains010("01099992222").equals("정상적으로 추가되었습니다."));
-	assertTrue(value.whetherIfContains010("01071114655").equals("정상적으로 추가되었습니다."));
-}
-@Test
-public void whenNotContains010VerificationTest() {
-	Address value = new Address();
-	assertTrue(value.whetherIfContains010("01118881462").equals("잘못된 값입니다."));
-	assertTrue(value.whetherIfContains010("전화번호").equals("잘못된 값입니다."));
-	assertTrue(value.whetherIfContains010("-^&*^ㅉ*&^").equals("잘못된 값입니다."));
-	
-}
-
 @Test
 public void whenPasswordProperLengthValidationTest() {
 	Address value = new Address();
