@@ -1,1 +1,3 @@
-이클립스 등의 자바를 실행 가능한 프로그램으로 address.java가 포함된 패키지 내에서 addressTest.java를 Junit으로 실행하면 된다.
+To run AddressTest.java, you need to run it by a program like eclopse that provides java and JUnit tools.
+
+You also need Address.java inside the same folder or package to implement AddressTest.java by using JUnit.
