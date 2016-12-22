@@ -50,15 +50,6 @@
 		<%
 	}
 	
-	else if (!formPhone.contains("010")) {
-		%>
-		<script language=javascript>
-   		self.window.alert("잘못된 값입니다.");
-   		location.href="address_add.jsp"; 
-  	 </script>
-		<%
-	}
-	
 	else {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");            
