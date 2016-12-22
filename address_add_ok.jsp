@@ -44,7 +44,7 @@
 	if (ncount != formPhone.length()) {
 		%>
 		<script language=javascript>
-		self.window.alert("숫자로만 입력해주세요.");
+		self.window.alert("숫자만을 입력해주십시오.");
 		location.href="address_add.jsp";
 		</script>
 		<%
