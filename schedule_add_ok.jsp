@@ -29,7 +29,7 @@
 	if (formYear.isEmpty() || formMonth.isEmpty() || formDay.isEmpty() || formMemo.isEmpty()) {
 		%>
 		<script language=javascript>
-	   self.window.alert("값을 입력하세요.");
+	   self.window.alert("다시 입력하여 주십시오.");
 	   location.href="schedule_add.jsp"; 
 	   </script>
 		<%
@@ -38,7 +38,7 @@
 	if (Integer.parseInt(formMonth) == 2 && Integer.parseInt(formDay) > 28 && !((Integer.parseInt(formYear) % 4 == 0 && Integer.parseInt(formYear) % 100 != 0) || Integer.parseInt(formYear) % 400 == 0)) {
 		%>
 		<script language=javascript>
-	   self.window.alert("잘못된 값입니다.");
+	   self.window.alert("다시 입력하여 주십시오.");
 	   location.href="schedule_add.jsp"; 
 	   </script>
 		<%
@@ -47,7 +47,7 @@
 		if (Integer.parseInt(formDay) > 30) {
 		%>
 		<script language=javascript>
-	   self.window.alert("잘못된 값입니다.");
+	   self.window.alert("다시 입력하여 주십시오.");
 	   location.href="schedule_add.jsp"; 
 	   </script>
 		<%}
@@ -55,7 +55,7 @@
 	else if (Integer.parseInt(formDay) > 31) {
 		%>
 		<script language=javascript>
-	   self.window.alert("잘못된 값입니다.");
+	   self.window.alert("다시 입력하여 주십시오.");
 	   location.href="schedule_add.jsp"; 
 	   </script>
 		<%
@@ -74,7 +74,7 @@
 			pstmt.executeUpdate();
 			%>
 		 	<script language=javascript>
-	 		self.window.alert("성공적으로 추가되었습니다.");
+	 		self.window.alert("정상적으로 추가되었습니다.");
 	  		location.href="index.jsp"; 
 	   		</script>
 	   	<%	
