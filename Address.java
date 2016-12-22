@@ -1,11 +1,9 @@
-﻿
 public class Address {
 	String whetherIfPasswordProperLength(String formPass) {
 		if (formPass.length() < 6 || formPass.length() > 12)
 			return "6~12자 내로 입력해주세요.";
 		else
-			return "정상적으로 추가되었습니다.";
-		
+			return "정상적으로 추가되었습니다.";		
 	}
 	
 	String whetherIfPasswordMatch(String formPass, String formPassCheck) {
@@ -14,5 +12,4 @@ public class Address {
 		else
 			return "정상적으로 추가되었습니다.";
 	}
-
 }
