@@ -35,7 +35,7 @@
 		<%
 	}
 	
-	if (Integer.parseInt(formMonth) == 2 && Integer.parseInt(formDay) > 28) {
+	if (Integer.parseInt(formMonth) == 2 && Integer.parseInt(formDay) > 28 && !((Integer.parseInt(formYear) % 4 == 0 && Integer.parseInt(formYear) % 100 != 0) || Integer.parseInt(formYear) % 400 == 0)) {
 		%>
 		<script language=javascript>
 	   self.window.alert("잘못된 값입니다.");
@@ -61,7 +61,7 @@
 		<%
 	}
 	else {
-		try{
+		try {
 			Class.forName("com.mysql.jdbc.Driver");            
 			conn=DriverManager.getConnection(url,dbuser,dbpass);
 		
@@ -79,12 +79,12 @@
 	   		</script>
 	   	<%	
 		}
-		catch(SQLException ex) {
+		catch (SQLException ex) {
 			out.println("에러: "+ex);		
 		}
 		finally {
-			if(pstmt != null) try{pstmt.close();}catch(SQLException sqle){} 
-			if(conn != null) try{conn.close();}catch(SQLException sqle){}   
+			if (pstmt != null) try {pstmt.close();} catch(SQLException sqle){} 
+			if (conn != null) try {conn.close();} catch(SQLException sqle){}   
 		}
 	}	
 %>
