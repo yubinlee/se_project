@@ -8,9 +8,23 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="layout.css" media="screen and (max-width:1080px)">
 <title>비밀번호 수정</title>
+<script language="JavaScript">
+function myconfirm(){ 
+	if (confirm("비밀번호를 변경하시겠습니까?")){ 
+		//
+	}
+	else{ 
+	  	location.href="index.jsp"; 
+	} 
+} 
+</script>
 </head>
-
+<html>
 <body class="main">
+
+<script language="JavaScript">
+myconfirm();
+</script>
 	<div id="wrapper">
 		<div id="headwrap">
 			<header id="header">
@@ -54,5 +68,4 @@
 		</div>
 	</div>
 </body>
-
 </html>
