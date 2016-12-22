@@ -102,15 +102,15 @@
 							</TABLE>
 							<br/>
 							<%
-							if(lastRow > 0) {
+							if (lastRow > 0) {
 							int setPage = 1;
 							int lastPage = 0;
-							if(lastRow % listSize == 0)
+							if (lastRow % listSize == 0)
 								lastPage = lastRow / listSize;
 							else
 								lastPage = lastRow / listSize + 1;
 								
-							while(setPage <= lastPage) {
+							while (setPage <= lastPage) {
 								if (setPage == currentPage) {
 									%>
 									[<%=setPage%>]
@@ -124,12 +124,12 @@
 								setPage = setPage + 1;
 							}
 						
-							if(1 < currentPage) {
+							if (1 < currentPage) {
 								%>
 								<a href="address_list.jsp?pageNum=<%=currentPage-1%>">◀</a>
 								<%
 							}
-							if(lastPage > currentPage) {
+							if (lastPage > currentPage) {
 								%>
 								<a href="address_list.jsp?pageNum=<%=currentPage+1%>">▶</a>
 								<%
