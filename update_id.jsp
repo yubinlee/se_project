@@ -2,15 +2,31 @@
 <%@ page import="java.util.*" %>
 <%@ page import="java.io.*" %>
 <%@ page import="java.sql.*" %>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="layout.css" media="screen and (max-width:1080px)">
 <title>아이디 수정</title>
+<script language="JavaScript">
+function myconfirm(){ 
+	if (confirm("아이디를 변경하시겠습니까?")){ 
+		//
+	}
+	else{ 
+	  	location.href="index.jsp"; 
+	} 
+} 
+</script>
 </head>
 
 <body class="main">
+
+<script language="JavaScript">
+myconfirm();
+</script>
+
 	<div id="wrapper">
 		<div id="headwrap">
 			<header id="header">
