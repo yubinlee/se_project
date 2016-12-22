@@ -5,8 +5,7 @@ public class AddressTest {
 public void whenPasswordProperLengthValidationTest() {
 	Address value = new Address();
 	assertTrue(value.whetherIfPasswordProperLength("s25jinch555").equals("정상적으로 추가되었습니다."));
-	assertTrue(value.whetherIfPasswordProperLength("gr22nt2@").equals("정상적으로 추가되었습니다."));
-	
+	assertTrue(value.whetherIfPasswordProperLength("gr22nt2@").equals("정상적으로 추가되었습니다."));	
 }
 
 @Test
@@ -19,12 +18,15 @@ public void whenPasswordNotProperLengthVerificationTest() {
 	
 	
 }
+
+@Test
 public void whenPasswordMatchValidationTest() {
 	Address value = new Address();
 	assertTrue(value.whetherIfPasswordMatch("s25jin", "s25jin").equals("정상적으로 추가되었습니다."));
 	assertTrue(value.whetherIfPasswordMatch("dochanjin", "dochanjin").equals("정상적으로 추가되었습니다."));
 }
 
+@Test
 public void whenPasswordNotMatchVerificationTest() {
 	Address value = new Address();
 	assertTrue(value.whetherIfPasswordMatch("شجرة المعر", "s分數2ر5分數jin").equals("비밀번호 확인이 잘못되었습니다."));
