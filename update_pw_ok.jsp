@@ -37,7 +37,7 @@
 		</script>
 	<%}
 
-	else if (6 > formPass.length() && 12 < formPass.length()) {%>
+	else if (6 > formPass.length() || 12 < formPass.length()) {%>
 		<script language=javascript>
 		self.window.alert("6~12자 이내로 입력해주세요.");
  		location.href="update_pw.jsp"; 
