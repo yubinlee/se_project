@@ -9,7 +9,7 @@
 <script language="JavaScript">
 function myconfirm(){ 
 	if (confirm("정말 삭제 하시겠습니까?")){ 
-		location.href="schedule_delete.jsp?no=<%=delnum%>";
+		location.href="schedule_delete.jsp?num=<%=delnum%>";
 	}
 	else{ 
 	  	location.href="index.jsp"; 
