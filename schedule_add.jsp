@@ -43,7 +43,7 @@
 										<td colspan="6"><textarea name="newmemo"></textarea></td>
 									</tr>
 									<tr>
-										<td colspan="6" align="center"><input type="submit" value="추가"></td>
+										<td colspan="6" align="center"><input type="submit" value="추가하기"></td>
 									</tr>
 								</table>
 							</form>
