@@ -30,6 +30,7 @@
 					else { %>
 						<form>
 							<table>
+								<h4><%=curuser %></h4><br/>
 								<h2><a href="logout.jsp">로그아웃</a></h2><br/>
 								<h2><a href="update_id.jsp">아이디 변경</a></h2><br/>
 								<h2><a href="update_pw.jsp">비밀번호 변경</a></h2><br/>
@@ -45,7 +46,7 @@
 			<ul>
 				<li>
 					<dl>
-						<dt><a href="address_list.jsp">주소록</a></dt>
+						<dt><a href="address_list.jsp">연락처</a></dt>
 						<dd><a href="address_list.jsp"><img src="phonebookimg.png" alt="" /></a></dd>
 						<dt><a href="schedule_list.jsp">스케줄</a></dt>
 						<dd><a href="schedule_list.jsp"><img src="calendarimg.png" alt="" /></a></dd>
