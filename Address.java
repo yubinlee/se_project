@@ -13,8 +13,9 @@ public class Address {
 		boolean result = false;
 
 		try {
-			Integer.parseInt(str);
-			result = true;
+			int number = Integer.parseInt(str);
+			if (number > 0) 
+				result = true;
 		} catch (Exception e) {
 			;
 		}

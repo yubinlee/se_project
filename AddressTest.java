@@ -22,6 +22,7 @@ public class AddressTest {
 	public void testContainOnlyNumberVerificationAddress() {
 		Address address = new Address();
 		
+		assertTrue(address.addAddress("Tom", "-1234").equals("숫자 만을 입력하여 주십시오."));
 		assertTrue(address.addAddress("Tom", "010dffs93892").equals("숫자 만을 입력하여 주십시오."));
 		assertTrue(address.addAddress("Tom", "^*&*").equals("숫자 만을 입력하여 주십시오."));
 	}
