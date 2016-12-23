@@ -32,7 +32,7 @@
 	
 	else if (!formPass.equals(formPassCheck)) {%>
 		<script language=javascript>
-  		self.window.alert("잘못입력하였습니다.");
+  		self.window.alert("잘못 입력하습니다.");
 		location.href="update_pw.jsp"; 
 		</script>
 	<%}
