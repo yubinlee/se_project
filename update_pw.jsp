@@ -56,6 +56,10 @@ myconfirm();
 									<tr>
 										<td>비밀번호 확인 </td>
 										<td><input type="password" name="userpwcheck" size="20"></td>
+									</tr>
+									<tr>
+										<td colspan="4" input type="text"><h6>영소문자, 숫자 혼합해서 6~12자 이내로 입력해주세요.</h6></td>
+									</tr>
 									<tr>
 										<td colspan="4" align="center"><input type="submit" value="확인"></td>
 									</tr>
