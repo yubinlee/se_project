@@ -61,7 +61,7 @@ myconfirm();
 										<td colspan="4" input type="text"><h6>영소문자, 숫자 혼합해서 6~12자 이내로 입력해주세요.</h6></td>
 									</tr>
 									<tr>
-										<td colspan="4" align="center"><input type="submit" value="확인"></td>
+										<td colspan="4" align="center"><input type="submit" value="완료"></td>
 									</tr>
 								</table>
 							</form>
@@ -72,4 +72,5 @@ myconfirm();
 		</div>
 	</div>
 </body>
+
 </html>
