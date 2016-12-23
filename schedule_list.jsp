@@ -28,6 +28,17 @@
 </HEAD>
 
 <body class="main">
+
+<%
+	String curuser = (String)session.getAttribute("curuser");
+		if (curuser == null) {%>
+			<script language=javascript>
+			self.window.alert("접근할 수 없습니다. 로그인 후 이용해주세요.");
+ 	 		location.href="index.jsp"; 
+			</script>
+		<%}
+		else {%>
+
 	<div id="wrapper">
 		<div id="headwrap">
 		<header id="header">
@@ -46,7 +57,7 @@
 			<div class="section_cont02">
 				<ul>
 					<li>
-						<h2><a href=schedule_add.jsp>+스케줄 추가</a></h2><br/>
+						<h2><a href=schedule_add.jsp>+ 추가</a></h2><br/>
 						<TABLE border="1">
 							<TR>
 								<TD> 년 </TD>
@@ -82,7 +93,7 @@
 									strSQL = "SELECT * FROM schedule";
 									rs = stmt.executeQuery(strSQL);				
 									for (i = 1; rs.next(); i++) {
-										if(i >= startRow && i <=endRow){
+										if (i >= startRow && i <=endRow) {
 										%>
 											<TR>
 												<TD><%=rs.getString("year") %></TD>
@@ -93,7 +104,7 @@
 												<TD>&nbsp;</TD>
 												<TD><%=rs.getString("memo") %></TD>
 												<TD>&nbsp;</TD>
-												<TD><a href='schedule_delete.jsp?num=<%=rs.getString("num")%>'>삭제</a></TD>
+												<TD><a href='schedule_delete_check.jsp?num=<%=rs.getString("num")%>'>삭제</a></TD>
 											</TR>
 											<%row++;
 										}
@@ -110,7 +121,7 @@
 								}
 
 							}
-							catch(SQLException ex) { 
+							catch (SQLException ex) { 
 								%>
 								<TR>
 									<TD colspan="4"> 에러: <%=ex %> </TD>
@@ -118,16 +129,16 @@
 								<%
 							}%>
 						</TABLE><br/><%
-						if(lastRow > 0) {
+						if (lastRow > 0) {
 							int setPage = 1;
 							
 							int lastPage = 0;
-							if(lastRow % listSize == 0)
+							if (lastRow % listSize == 0)
 								lastPage = lastRow / listSize;
 							else
 								lastPage = lastRow / listSize + 1;
 								
-							while(setPage <= lastPage) {
+							while (setPage <= lastPage) {
 								if (setPage == currentPage) {
 									%>
 											[<%=setPage%>]
@@ -141,17 +152,18 @@
 								setPage = setPage + 1;
 							}
 						
-							if(1 < currentPage) {
+							if (1 < currentPage) {
 								%>
 								<a href="schedule_list.jsp?pageNum=<%=currentPage-1%>">◀</a>
 								<%
 							}
-							if(lastPage > currentPage) {
+							if (lastPage > currentPage) {
 								%>
 								<a href="schedule_list.jsp?pageNum=<%=currentPage+1%>">▶</a>
 								<%
 							}
-						}%>
+						}
+					}%>
 						</li>
 					</ul>
 				</div>
