@@ -35,10 +35,12 @@
 									</tr>
 									<tr>
   										<td>전화번호</td>
-  										<td colspan="3"><input type="text" name="newphone" size="30"></td>
+  										<td colspan="1"><input type="text" name="newphone1" size="5" >-</td>
+  										<td colspan="1"><input type="text" name="newphone2" size="5" >-</td>
+  										<td colspan="1"><input type="text" name="newphone3" size="5" ></td>
 									</tr>
 									<tr>
-  										<td colspan="4" align="center"><input type="submit" value="추가"></td>
+  										<td colspan="4" align="center"><input type="submit" value="추가하기"></td>
 									</tr>
 								</table>
 							</form>
