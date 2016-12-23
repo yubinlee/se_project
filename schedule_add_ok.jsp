@@ -43,6 +43,14 @@
 	   </script>
 		<%
 	}
+	else if (Integer.parseInt(formMonth) == 2 && Integer.parseInt(formDay) > 29 && ((Integer.parseInt(formYear) % 4 == 0 && Integer.parseInt(formYear) % 100 != 0) || Integer.parseInt(formYear) % 400 == 0)) {
+		%>
+		<script language=javascript>
+	   self.window.alert("다시 입력하여 주십시오.");
+	   location.href="schedule_add.jsp"; 
+	   </script>
+		<%
+	}
 	else if (Integer.parseInt(formMonth) == 4 || Integer.parseInt(formMonth) == 6 || Integer.parseInt(formMonth) == 9 || Integer.parseInt(formMonth) == 11) {
 		if (Integer.parseInt(formDay) > 30) {
 		%>
@@ -52,7 +60,23 @@
 	   </script>
 		<%}
 	}
-	else if (Integer.parseInt(formDay) > 31) {
+	else if (Integer.parseInt(formDay) > 31 || Integer.parseInt(formDay) < 1) {
+		%>
+		<script language=javascript>
+	   self.window.alert("다시 입력하여 주십시오.");
+	   location.href="schedule_add.jsp"; 
+	   </script>
+		<%
+	}
+	else if (Integer.parseInt(formMonth) < 1 || Integer.parseInt(formMonth) > 12) {
+		%>
+		<script language=javascript>
+	   self.window.alert("다시 입력하여 주십시오.");
+	   location.href="schedule_add.jsp"; 
+	   </script>
+		<%
+	}
+	else if (Integer.parseInt(formYear) < 1) {
 		%>
 		<script language=javascript>
 	   self.window.alert("다시 입력하여 주십시오.");
