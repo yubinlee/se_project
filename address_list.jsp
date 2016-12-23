@@ -27,6 +27,17 @@
 <TITLE> 연락처 관리 </TITLE>
 </HEAD>
 <body class="main">
+
+<%
+	String curuser = (String)session.getAttribute("curuser");
+		if (curuser == null) {%>
+			<script language=javascript>
+			self.window.alert("접근할 수 없습니다. 로그인 후 이용해주세요.");
+ 	 		location.href="index.jsp"; 
+			</script>
+		<%}
+		else {%>
+		
 	<div id="wrapper">
 		<div id="headwrap">
 			<header id="header">
@@ -44,7 +55,7 @@
 				<div class="section_cont02">
 					<ul>
 						<li>
-							<h2><a href=address_add.jsp>+연락처 추가</a></h2><br/>
+							<h2><a href=address_add.jsp>+ 추가</a></h2><br/>
 							<TABLE border="1">
 								<TR><TD> 이름 </TD><TD>&nbsp;</TD><TD> 전화번호 </TD></TR>
 								<%
@@ -75,11 +86,18 @@
 										for (i = 1; rs.next(); i++){
 											if (i >= startRow && i <= endRow) {%>
 											<TR>
+												<TD><%if (rs.getString("phone").contains("010")) {
+														%><img src="phoneimg.png" alt="" /><%
+													}
+													else {
+														%><img src="homeimg.png" alt="" /><%
+													}%></TD>
+												<TD>&nbsp;</TD>
 												<TD><%=rs.getString("name") %></TD>
 												<TD>&nbsp;</TD>
 												<TD><%=rs.getString("phone") %></TD>
 												<TD>&nbsp;</TD>
-												<TD><a href='address_delete.jsp?no=<%=rs.getString("no")%>'>삭제</a></TD>
+												<TD><a href='address_delete_check.jsp?no=<%=rs.getString("no")%>'>삭제</a></TD>
 											</TR><%
 											row++;
 											}
@@ -102,15 +120,15 @@
 							</TABLE>
 							<br/>
 							<%
-							if (lastRow > 0) {
+							if(lastRow > 0) {
 							int setPage = 1;
 							int lastPage = 0;
-							if (lastRow % listSize == 0)
+							if(lastRow % listSize == 0)
 								lastPage = lastRow / listSize;
 							else
 								lastPage = lastRow / listSize + 1;
 								
-							while (setPage <= lastPage) {
+							while(setPage <= lastPage) {
 								if (setPage == currentPage) {
 									%>
 									[<%=setPage%>]
@@ -124,17 +142,18 @@
 								setPage = setPage + 1;
 							}
 						
-							if (1 < currentPage) {
+							if(1 < currentPage) {
 								%>
 								<a href="address_list.jsp?pageNum=<%=currentPage-1%>">◀</a>
 								<%
 							}
-							if (lastPage > currentPage) {
+							if(lastPage > currentPage) {
 								%>
 								<a href="address_list.jsp?pageNum=<%=currentPage+1%>">▶</a>
 								<%
 							}
 						}
+		}
 						%>
 						</li>
 					</ul>
