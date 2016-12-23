@@ -22,7 +22,10 @@
 	String dbpass = "sbdbwj";
 
 	String formName = request.getParameter("newname");
-	String formPhone = request.getParameter("newphone");
+	String formPhone1 = request.getParameter("newphone1");
+	String formPhone2 = request.getParameter("newphone2");
+	String formPhone3 = request.getParameter("newphone3");
+	String formPhone = formPhone1+formPhone2+formPhone3;
 	
 	if (formName.isEmpty() || formPhone.isEmpty()) {
 		%>
