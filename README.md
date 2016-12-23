@@ -14,7 +14,7 @@ MySQL workbench를 이용해서 localhost에 데이터베이스 서버를 만들
 
 3. schema privilege는 모두 허용해주세요.
 
-4~6까지의 내용은 백업 파일에도 포함되어있습니다.
+아래의 내용은 백업 파일에도 포함되어있습니다.
 
 4. account table
 column / datatype / 그 외
