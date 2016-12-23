@@ -3,14 +3,14 @@ import static org.junit.Assert.*;
 
 public class AddressTest {
 	@Test
-	public void addAddressValidationTest() {
+	public void testValidationAddress() {
 		Address address = new Address();
 		
 		assertTrue(address.addAddress("Tom", "01092993892").equals("성공적으로 추가되었습니다."));
 	}
 
 	@Test
-	public void isEmptyValueVerificationTest() {
+	public void testIsEmptyValueVerificationAddress() {
 		Address address = new Address();
 		
 		assertTrue(address.addAddress("", "01092993892").equals("값을 입력하세요."));
@@ -19,7 +19,7 @@ public class AddressTest {
 	}
 
 	@Test
-	public void containOnlyNumberVerificationTest() {
+	public void testContainOnlyNumberVerificationAddress() {
 		Address address = new Address();
 		
 		assertTrue(address.addAddress("Tom", "010dffs93892").equals("숫자 만을 입력하여 주십시오."));
